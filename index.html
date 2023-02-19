@@ -6,14 +6,41 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/all.min.css" />
     <title>Tadeusz Hoczek - Developer</title>
+    <meta
+      name="description"
+      content="Tworzę skuteczne, nowoczesne strony internetowe. Projekt graficzny - Responsywność - Optymalizacja SEO - Wysoka jakość. Napisz, omówimy szczegóły twojego projektu ... "
+    />
+    <meta
+      name="keywords"
+      content="strony internetowe, serwisy internetowe, aplikacje"
+    />
+    <meta name="robots" content="follow" />
+    <meta name="author" content="Tadeusz Hoczek" />
+    <meta name="copyright" content="Tadeusz Hoczek" />
+
+    <script>
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset /
+              (document.body.offsetHeight - window.innerHeight)
+          );
+        },
+        false
+      );
+    </script>
   </head>
 
   <body>
     <div id="home"></div>
+    <div class="progress-background"></div>
+    <div class="progress"></div>
     <!---------------------------------------------------
 Header
 -------------------------------------------------->
-    <header id="home">
+    <header>
       <div class="header-wrapper">
         <div class="header-logo">
           <i class="fa-solid fa-code" style="color: #075fe4"></i> &nbsp;
@@ -48,6 +75,7 @@ Header
         </div>
       </div>
     </header>
+
     <!-------------------------------------------------
 Main
 -------------------------------------------------->
@@ -108,8 +136,8 @@ About
           ></div>
           <h3>O&nbsp;Mnie :</h3>
           <span>
-            Doświadczene programistyczne zdobyte <br />w wielu branżach od 2000
-            roku.
+            Doświadczene programistyczne zdobywane <br />w wielu branżach od
+            2000 roku.
           </span>
         </div>
         <div class="about-right">
@@ -259,6 +287,14 @@ Portofolio
           />
         </div>
       </section>
+      <!-------------------------------------------------
+Offer
+-------------------------------------------------->
+      <!-- <div
+        style="border: 3px solid #075fe4; width: 4rem; margin: 0 0 0.7rem"
+      ></div>
+      <h3 class="contact-header" id="offer">Oferta :</h3>
+      <section class="offer"></section> -->
       <!-------------------------------------------------
 Contact
 -------------------------------------------------->

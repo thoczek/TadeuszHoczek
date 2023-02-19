@@ -173,6 +173,7 @@ Fonts definition
 --------------------------------------------------*/
   --normal-font-family: Spacegrotesk, sans-serif;
 }
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------
 Styles
@@ -208,6 +209,41 @@ body {
   font-family: var(--normal-font-family);
 }
 /*-------------------------------------------------
+Progress bar
+--------------------------------------------------*/
+.progress-background {
+  height: 3px;
+  width: 100%;
+  background-color: var(--background-primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.progress {
+  height: 3px;
+  width: 0%;
+  background-color: var(--blue-slash);
+  position: fixed;
+  top: 0rem;
+  left: 0;
+  animation: progress 1s linear;
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  z-index: 2;
+}
+@keyframes progress {
+  to {
+    background-color: var(--blue-slash);
+    width: 100%;
+  }
+}
+/*-------------------------------------------------
 Header
 --------------------------------------------------*/
 header {
@@ -215,7 +251,7 @@ header {
   flex-direction: row;
   box-sizing: border-box;
   position: sticky;
-  top: 0;
+  top: 3px;
   background-color: var(--background-primary);
   width: 75rem;
   padding: 2rem 0;
@@ -730,6 +766,12 @@ Portofolio
   list-style: disc inside;
 }
 /*-------------------------------------------------
+Offer
+--------------------------------------------------*/
+.offer {
+  display: flex;
+}
+/*-------------------------------------------------
 Contact
 --------------------------------------------------*/
 .contact-header {
@@ -881,7 +923,7 @@ Media Queries Tablet
     box-sizing: border-box;
     flex-direction: column;
     position: absolute;
-    top: 6.5rem;
+    top: 5rem;
     left: 0;
     align-items: flex-start;
     justify-content: center;
